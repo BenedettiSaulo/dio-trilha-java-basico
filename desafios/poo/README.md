@@ -32,8 +32,8 @@ Com base no vídeo de lançamento do iPhone de 2007 (link abaixo), você deve el
 classDiagram
     class ReprodutorMusical {
         <<Interface>>
-        #string musicaAtual 
-        #bool estaTocando
+        #String musicaAtual 
+        #boolean estaTocando
         +tocar()
         +pausar()
         +selecionarMusica(String musica)
@@ -41,8 +41,8 @@ classDiagram
 
     class AparelhoTelefonico {
         <<Interface>>
-        #string numeroLigacao
-        #bool ligacaoAtiva
+        #String numeroLigacao
+        #boolean ligacaoAtiva
         +ligar(String numero)
         +atender()
         +iniciarCorreioVoz()
@@ -50,7 +50,7 @@ classDiagram
 
     class NavegadorInternet {
         <<Interface>>
-        #string paginaAtual
+        #String paginaAtual
         #int totalAbas
         +exibirPagina(String url)
         +adicionarNovaAba()
@@ -58,6 +58,12 @@ classDiagram
     }
 
     class iPhone {
+        +String modelo
+        +String sistemaOperacional
+        +int bateria
+        +String status
+        +ligarDesligar(boolean flagLigarDesligar)
+        +carregar(int quantidade)
     }
 
     iPhone --> ReprodutorMusical
