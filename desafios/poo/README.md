@@ -25,15 +25,15 @@ Com base no vídeo de lançamento do iPhone de 2007 (link abaixo), você deve el
 
 ### Objetivo
 1. Criar um diagrama UML que represente as funcionalidades descritas acima.
-2. Implementar as classes e interfaces correspondentes em Java (Opcional).
+2. Implementar as classes e interfaces correspondentes em Java.
 
-### Exemplo de Diagrama UML (Mermaid)
+### Diagrama UML (Mermaid)
 ```mermaid
 classDiagram
     class ReprodutorMusical {
         <<Interface>>
-        #String musicaAtual 
-        #boolean estaTocando
+        -String musicaAtual 
+        -boolean estaTocando
         +tocar()
         +pausar()
         +selecionarMusica(String musica)
@@ -41,8 +41,8 @@ classDiagram
 
     class AparelhoTelefonico {
         <<Interface>>
-        #String numeroLigacao
-        #boolean ligacaoAtiva
+        -String numeroLigacao
+        -boolean ligacaoAtiva
         +ligar(String numero)
         +atender()
         +iniciarCorreioVoz()
@@ -50,19 +50,19 @@ classDiagram
 
     class NavegadorInternet {
         <<Interface>>
-        #String paginaAtual
-        #int totalAbas
+        -String paginaAtual
+        -int totalAbas
         +exibirPagina(String url)
         +adicionarNovaAba()
         +atualizarPagina()
     }
 
     class iPhone {
-        +String modelo
-        +String sistemaOperacional
-        +int bateria
-        +String status
-        +ligarDesligar(boolean flagLigarDesligar)
+        -String modelo
+        -String sistemaOperacional
+        -int bateria
+        -boolean ligado
+        +ligarDesligar()
         +carregar(int quantidade)
     }
 
@@ -71,13 +71,3 @@ classDiagram
     iPhone --> NavegadorInternet
     
 ```
-
-### Instruções
-1. Assista ao vídeo do lançamento do iPhone para entender as funcionalidades principais.
-2. Utilize uma ferramenta UML de sua preferência para criar o diagrama das classes e interfaces. Você pode utilizar o modelo acima (criado na sintaxe [Mermaid](https://mermaid.js.org/)), uma alternativa open-source e compatível com arquivos Markdown como este.
-3. Opcionalmente, caso esteja cheio(a) de confiança, pode implementar as classes Java representadas em seu diagrama UML.
-4. Submeta seu repositório GitHub conforme as orientações da plataforma DIO. Por exemplo:
-
-```bash
-https://github.com/glysns/trilha-java-basico/desafios/poo/README.md
-```` 
