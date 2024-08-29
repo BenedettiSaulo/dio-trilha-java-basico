@@ -31,18 +31,27 @@ Com base no vídeo de lançamento do iPhone de 2007 (link abaixo), você deve el
 ```mermaid
 classDiagram
     class ReprodutorMusical {
+        <<Interface>>
+        #string musicaAtual 
+        #bool estaTocando
         +tocar()
         +pausar()
         +selecionarMusica(String musica)
     }
 
     class AparelhoTelefonico {
+        <<Interface>>
+        #string numeroLigacao
+        #bool ligacaoAtiva
         +ligar(String numero)
         +atender()
         +iniciarCorreioVoz()
     }
 
     class NavegadorInternet {
+        <<Interface>>
+        #string paginaAtual
+        #int totalAbas
         +exibirPagina(String url)
         +adicionarNovaAba()
         +atualizarPagina()
